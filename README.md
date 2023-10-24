@@ -22,7 +22,9 @@
 
 # **Links**
 Click this to go to [YouTube](https://youtube.com "Broadcast Yourself")
+
 Click [this](<fake@example.com> "This is fake") send a message
+
 Any spaces need to be replaced with %20, opening parenthesis with %28, and closing parenthesis with %29
 
 # **Images**
