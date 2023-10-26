@@ -1,1 +1,1 @@
-[![Lemonoids](img/lemonoids.png "Lemonoids")](https://ncsources.github.io/games/lemonstroids.html)  [![Cookie Clicker](img/cookie-clicker.png "Cookie Clicker")](https://ncsources.github.io/games/cookie-clicker/index.html)
+[![Lemonoids](img/lemonoids.png "Lemonoids")](https://ncsources.github.io/games/lemonstroids.html)  [![Cookie Clicker](img/cookie-clicker.png "Cookie Clicker")](https://ncsources.github.io/games/cookie-clicker/index.html)  [![Tetris](img/tetris.png "Tetris")](https://ncsources.github.io/games/tetris/index.html)
