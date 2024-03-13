@@ -1,42 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Page name -->
-    <title>Home - Google Drive</title>
-    <!-- Page icon -->
-    <link
-      rel="shortcut icon"
-      href="http://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png"
-      type="image/x-icon"
-    />
-  </head>
-  <body>
-    <script>
-      let pass;
-      fetch('https://ncresources.github.io/code/code.txt')
+<html>
+<head>
+  <title>Redirecting...</title>
+</head>
+<body>
+  <script>
+    // Fetch the text file and verify password
+    fetch('https://ncresources.github.io/code/code.txt')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
-       }
-       return response.text();
+        }
+        return response.text();
       })
       .then(text => {
-        console.log(text); // Print the contents of the text file
-        pass = text;
+        const password = text.trim(); // Get the content of the text file
+        console.log('Password fetched successfully:', password);
+
+        // Function to prompt for password and verify
+        function promptForPassword() {
+          const inputPass = prompt('Enter the password:');
+
+          if (inputPass === password) {
+            const redirectUrl = 'data:text/html;charset=utf-8,' + encodeURIComponent(`
+              <!DOCTYPE html>
+              <html>
+              <head>
+                <title>zzzzzzzzzz.html</title>
+              </head>
+              <body>
+                <!-- Your zzzzzzzzzz.html code goes here -->
+                <script>
+                  // Your zzzzzzzzzz.html JavaScript code goes here
+                </script>
+              </body>
+              </html>
+            `);
+
+            window.location.href = redirectUrl; // Redirect to about:blank page with the same code
+          } else {
+            alert('Incorrect password. Please try again.');
+            promptForPassword(); // Prompt again if password is incorrect
+          }
+        }
+
+        promptForPassword(); // Prompt for password after fetching content
       })
       .catch(error => {
         console.error('There was a problem fetching the text file:', error);
       });
-      
-      var x = prompt("Password:");
-      if (x == pass) {
-       window.location = "https://ncsources.github.io/869354n312854b8231n47t82b754cb09w743ny93824byriwwrey.html";
-      }
-      else {
-       window.location = "https://ncsources.github.io";
-      }
-    </script>
-  </body>
+  </script>
+</body>
+</html>
+
+      .catch(error => {
+        console.error('There was a problem fetching the text file:', error);
+      });
+  </script>
+</body>
 </html>
