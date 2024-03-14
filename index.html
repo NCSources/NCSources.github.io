@@ -12,7 +12,7 @@
     // Function to fetch the password from a text file and redirect if it matches
     function fetchPasswordAndRedirect() {
       // Fetch the password from the text file
-      fetch('https://ncresources.github.io/code/code.txt')
+      fetch('https://ncresources.github.io/code/main-code.txt')
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
