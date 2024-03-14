@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Verification</title>
+  <!-- Specify favicon -->
+  <link rel="icon" type="image/png" href="img/key.png">
+</head>
+<body>
+  <script>
+    // Function to fetch the password from a text file and redirect if it matches
+    function fetchPasswordAndRedirect() {
+      // Fetch the password from the text file
+      fetch('https://ncresources.github.io/code/main-code.txt')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text();
+        })
+        .then(password => {
+          password = password.trim(); // Trim any whitespace
+
+          // Prompt for password input
+          const inputPass = prompt('Enter the password:');
+          
+          // Verify the entered password
+          if (inputPass === password) {
+            // Redirect to the renamed HTML file if password matches
+            window.location.href = 'u6herve87vywire7cyf8n47yr6bf238o7c8o4y89ty53nb897yt8794y897rc9698473y52876423t76dxgx0swq9opeduo4d86wrpwp49t0p4[90ce7nb89dytfx97x234tbvt28rc7563nxr67e3yr2ehjwfiue3wy.html';
+          } else {
+            // Display error message and retry if password does not match
+            alert('Incorrect password. Please try again.');
+            fetchPasswordAndRedirect(); // Retry
+          }
+        })
+        .catch(error => {
+          console.error('There was a problem fetching the password:', error);
+        });
+    }
+
+    // Call the function to start the password verification process
+    fetchPasswordAndRedirect();
+  </script>
+</body>
+</html>
